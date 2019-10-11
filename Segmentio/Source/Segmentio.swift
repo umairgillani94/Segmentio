@@ -58,6 +58,10 @@ open class Segmentio: UIView {
     }
     private var isFlipped = false
     
+    func changeFlipped (shouldFlip: Bool) {
+        self.isFlipped = shouldFlip
+    }
+    
     // MARK: - Lifecycle
     
     required public init?(coder aDecoder: NSCoder) {
