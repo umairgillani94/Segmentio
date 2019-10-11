@@ -58,7 +58,7 @@ open class Segmentio: UIView {
     }
     private var isFlipped = false
     
-    func changeFlipped (shouldFlip: Bool) {
+    public func changeFlipped (shouldFlip: Bool) {
         self.isFlipped = shouldFlip
     }
     
