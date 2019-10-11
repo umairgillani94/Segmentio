@@ -49,17 +49,18 @@ open class Segmentio: UIView {
     private var indicatorLayer: CAShapeLayer?
     private var selectedLayer: CAShapeLayer?
     
-    private var isRTL: Bool {
-        if #available(iOS 9.0, *) {
-            return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft
-        } else {
-            return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
-        }
-    }
+    private var isRTL: Bool = false
+//     {
+//         if #available(iOS 9.0, *) {
+//             return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft
+//         } else {
+//             return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+//         }
+//     }
     private var isFlipped = false
     
-    public func changeFlipped (shouldFlip: Bool) {
-        self.isFlipped = shouldFlip
+    public func changeIsRtl (shouldFlip: Bool) {
+        self.isRTL = shouldFlip
     }
     
     // MARK: - Lifecycle
